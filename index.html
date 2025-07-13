@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Uzaib Bashir</title>
+</head>
+
+<body class="bg-[#06021a]">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-[#21212e] py-3 md:flex md:items-center md:justify-between">
+        <div class="flex items-center justify-between mx-10 my-2">
+            <img src="img/hero.png" class="select-none h-[60px] w-[60px] border-4 rounded-full">
+            <span class="-mx-[1px] text-4xl cursor-pointer text-[#bfaeff] px-[10px]"><b>Uzaib Bashir Malik</b></span>
+            <span class="text-3xl cursor-pointer text-[#793fff] md:hidden block"><ion-icon name="menu-outline"
+                    onclick="Menu(this)"></ion-icon></span>
+        </div>
+        <ul
+            class="md:flex md:items-center md:z-auto md:static bg-[#21212e] absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <!--z-[-1]-->
+            <li class="mx-4 my-4 md:my-0">
+                <a href="#" class="text-white hover:text-[#793fff] duration-500">Home</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="#" class="text-white hover:text-[#793fff] duration-500">About</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="#" class="text-white hover:text-[#793fff] duration-500">Experience</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="#" class="text-white hover:text-[#793fff] duration-500">Projects</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <button
+                    class="bg-[#8faee0] shadow-lg shadow-[#793fff]/30 text-white h-8 w-32 rounded-[5px]">Contact</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- top section -->
+    <section>
+        <div class="relative h-[500px] bg-[url('img/bg.png')] bg-cover bg-center bg-[#21212e]">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-[#21212e]/30 z-10"></div>
+            <!-- Content Above Overlay -->
+            <div class="relative z-20 h-full">
+                <!-- Text section (bottom-left with minimal blur) -->
+                <div
+                    class="absolute bottom-[40px] left-[50px] bg-black/20 backdrop-blur-[1px] px-6 py-4 rounded-md w-fit shadow-md">
+                    <div class="text-white text-3xl drop-shadow-md mb-2">
+                        Assaalmualikum, I'm <span class="text-[#bfaeff] font-bold">Uzaib</span>
+                    </div>
+                    <div class="text-white text-base mb-4 drop-shadow-sm leading-relaxed">
+                        Well I am an Artist working to<br>
+                        make world a better place<br>
+                        <span class="font-semibold">Know more about me below. ⬇️</span>
+                    </div>
+                    <button class="bg-[#793fff] text-white h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30">
+                        Download CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bio-section -->
+    <section>
+        <p class="my-[50px] text-center text-3xl text-white font-extrabold">
+            Here's More <span class="text-[#793fff]">About Me</span>
+        </p>
+        <!-- Container to wrap both blocks -->
+        <div class="flex flex-col items-center justify-center lg:flex-row gap-10">
+            <!-- Image Box -->
+            <img src="img/dp.png" class="h-[400px] w-[400px] rounded-[10px] object-cover shadow-lg select-none" />
+            <!-- Text Block -->
+            <div
+                class="bg-[#21212e] shadow-lg rounded-[10px] h-[400px] w-[400px] px-6 py-4 text-white text-sm overflow-auto">
+                <!-- Window Dots -->
+                <div class="flex space-x-2 mb-4">
+                    <div class="bg-red-600 rounded-full h-[15px] w-[15px]"></div>
+                    <div class="bg-green-600 rounded-full h-[15px] w-[15px]"></div>
+                    <div class="bg-blue-600 rounded-full h-[15px] w-[15px]"></div>
+                </div>
+                <!-- Code Text -->
+                <div class="font-mono text-pink-500">
+                    my Bio {<br>
+                    <span class="ml-6 text-blue-500">private:</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">Name:</span> "Uzaib Bashir";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">Course:</span>
+                        "Engineering";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">Department:</span> Computer
+                        Science;</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">Sem:</span> "4th";</span><br>
+                    <span class="ml-6 text-blue-500">languages:</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">C:</span> "master";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">C++:</span> "90% done";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">JavaScript:</span> "done";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">PHP:</span> "70%done";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">HTML:</span> "expert";</span><br>
+                    <span class="ml-6 text-blue-500">technologies:</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">CSS:</span> "done";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">Tailwind CSS:</span> "done";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">Bootstrap:</span> "done";</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">mySQL:</span> "20%done";</span><br>
+                    <span class="ml-6 text-blue-500">other skills:</span><br>
+                    <span class="ml-12 text-white"><span class="text-yellow-500">DSA:</span> "ongoing";</span><br>
+                    <span class="ml-6 text-pink-500">}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skill section -->
+    <section>
+        <div class="bg-[#21212e] h-[960px] w-auto mt-10 mb-10 md:h-[720px] lg:h-[450px]">
+            <p class="pt-[40px] text-center text-3xl text-white font-extrabold">Checkout my <span
+                    class="text-[#793fff]">skills 🤹</span></p>
+            <div
+                class=" bg-[#793fff] shadow-lg h-[250px] w-[300px] rounded-[10px] mx-[50px] mt-[50px] sm:mx-[180px] md:mx-[50px] xl:mx-[200px] 2xl:mx-[250px]">
+                <i class="material-icons text-white text-[70px] mx-[120px] mt-[30px]">language</i>
+                <p class="text-white text-2xl text-center mb-4 font-semibold">Web Development</p>
+                <p class="text-white text-1xl text-center text-clip px-5">With the help of latest technologies, I can
+                    develop and modify websites with beauty.</p>
+            </div>
+            <div
+                class=" bg-[#793fff] shadow-lg h-[250px] w-[300px] rounded-[10px] mx-[50px] mt-[20px] sm:mx-[180px] md:mx-[400px] md:-mt-[250px] lg:mx-[375px] xl:mx-[550px] 2xl:mx-[600px]">
+                <i class="material-icons text-white text-[70px] mx-[120px] mt-[30px]">lightbulb</i>
+                <p class="text-white text-2xl text-center mb-4 font-semibold">DSA</p>
+                <p class="text-white text-1xl text-center text-clip px-5">i have prior knowledge of Data Structures and
+                    Algorithms, thus can add efficency to world</p>
+            </div>
+            <div
+                class=" bg-[#793fff] shadow-lg h-[250px] w-[300px] rounded-[10px] mx-[50px] mt-[20px] sm:mx-[180px] md:mx-[250px] md:mt-[40px] lg:mx-[700px] lg:-mt-[250px] xl:mx-[900px] 2xl:mx-[950px]">
+                <i class="material-icons text-white text-[70px] mx-[120px] mt-[30px]">palette</i>
+                <p class="text-white text-2xl text-center mb-4 font-semibold">Art</p>
+                <p class="text-white text-1xl text-center text-clip px-5">an Artistic approach is always a better way to
+                    solve realistic problems</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience section -->
+    <section>
+        <p class="my-[50px] text-center text-3xl text-white font-extrabold">📌 My <span
+                class="text-[#793fff]">Experience</span></p>
+        <p class="text-white text-center -mt-[20px] mb-[60px] px-[5px]">This timeline summarizes my learnings till the
+            date.</p>
+        <!-- Responsive timeline container -->
+        <div class="flex flex-wrap justify-center gap-10 px-4 py-6">
+            <!-- Timeline item -->
+            <div class="flex flex-col items-center w-[260px]">
+                <div class="text-[#793fff] bg-white rounded-full p-1">
+                    <!-- Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2015</div>
+                    <p class="text-white text-center">Joined Jawahar Navodaya Vidyalaya</p>
+                </div>
+            </div>
+            <!-- Repeat this block for each year -->
+            <div class="flex flex-col items-center w-[260px]">
+                <div class="text-[#793fff] bg-white rounded-full p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2020</div>
+                    <p class="text-white text-center">Passed 10th standard from CBSE</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center w-[260px]">
+                <div class="text-[#793fff] bg-white rounded-full p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2022</div>
+                    <p class="text-white text-center">completed Intermediate in Physics, Chemistry, Maths and Computer
+                        Science </p>
+                </div>
+            </div>
+            <!-- Add remaining items here -->
+            <!-- ... -->
+            <div class="flex flex-col items-center w-[260px]">
+                <div class="text-[#793fff] bg-white rounded-full p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-check-circle-fill animate-ping" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                </div>
+                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">Currently</div>
+                    <p class="text-white text-center">pursuing BE/Btech in Computer Science and Engineering</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Project section -->
+    <section>
+        <div class="bg-[#21212e] h-[1400px] mb-[40px] w-auto md:h-[760px] lg:h-[540px]">
+            <p class=" mt-[50px] pt-[30px] text-center text-3xl text-[#793fff] font-extrabold md:mb-[40px]">Projects
+            </p>
+            <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                <img src="img/password-generator.png"
+                    class="select-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:ml-[35px] xl:ml-[65px]">
+                <div class="group">
+                    <div
+                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] xl:ml-[85px]">
+                    </div>
+                    <p
+                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[100px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[220px] md:ml-[120px] lg:ml-[100px] xl:ml-[120px]">
+                        Password Generator</p>
+                </div>
+                <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[280px] xl:ml-[300px]"
+                        viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                        <path
+                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                    </svg></a>
+                <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[330px]"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                    </svg></a>
+            </div>
+            <!-- Weather-App -->
+            <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                <img src="img/proWeather.png"
+                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:ml-[380px] xl:ml-[410px]">
+                <div class="group">
+                    <div
+                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] xl:ml-[430px]">
+                    </div>
+                    <p
+                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[250px] md:ml-[460px] xl:ml-[490px]">
+                        Weather App</p>
+                </div>
+                <a href="#" target="_blank">
+                    <!-- https://ashish-makes.github.io/blurry-gradient/ -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[630px] xl:ml-[650px]"
+                        viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                        <path
+                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                    </svg></a>
+                <a href="https://github.com/UzaibBashir/Weather-App" target="_blank"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[660px] xl:ml-[680px]"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                    </svg></a>
+            </div>
+
+            <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                <img src="img/encode-decode.png"
+                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:ml-[725px] lg:-mt-[180px] xl:ml-[755px]">
+                <div class="group">
+                    <div
+                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] lg:ml-[745px] xl:ml-[775px]">
+                    </div>
+                    <p
+                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[250px] md:ml-[140px] lg:ml-[805px] xl:ml-[840px]">
+                        Encode Decode</p>
+                </div>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[965px] xl:ml-[985px]"
+                        viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                        <path
+                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                    </svg></a>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[995px] xl:ml-[1015px]"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                    </svg></a>
+            </div>
+            <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                <img src="img/payment-gateway.png"
+                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:ml-[728px] lg:mt-[25px] xl:ml-[65px]">
+                <div class="group">
+                    <div
+                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] lg:ml-[745px] xl:ml-[75px]">
+                    </div>
+                    <p
+                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[110px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[240px] md:ml-[480px] lg:ml-[800px] xl:ml-[120px]">
+                        Payment Gateway</p>
+                </div>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[640px] lg:ml-[965px] xl:ml-[300px]"
+                        viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                        <path
+                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                    </svg></a>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[670px] lg:ml-[995px] xl:ml-[330px]"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                    </svg></a>
+            </div>
+            <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                <img src="img/text-tools.png"
+                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:-mt-[180px] lg:ml-[35px] xl:ml-[410px]">
+                <div class="group">
+                    <div
+                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] xl:ml-[430px]">
+                    </div>
+                    <p
+                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[160px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[280px] md:ml-[160px] xl:ml-[520px]">
+                        Text Tools</p>
+                </div>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[280px] xl:ml-[650px]"
+                        viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                        <path
+                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                    </svg></a>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[310px] xl:ml-[680px]"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                    </svg></a>
+            </div>
+            <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                <img src="img/word-counter.png"
+                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:-mt-[180px] lg:ml-[380px] xl:ml-[755px]">
+                <div class="group">
+                    <div
+                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] xl:ml-[785px]">
+                    </div>
+                    <p
+                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[260px] md:ml-[470px] xl:ml-[840px]">
+                        Word Counter</p>
+                </div>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[640px] lg:ml-[630px] xl:ml-[985px]"
+                        viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                        <path
+                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                    </svg></a>
+                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor"
+                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[660px] xl:ml-[1015px]"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section>
+        <div class="bg-[#21212e] h-auto w-auto pb-[40px]">
+            <p class="py-[30px] text-center text-3xl text-white font-extrabold">Contact</p>
+
+            <!-- Name -->
+            <div class="relative mx-auto w-fit mb-[20px]">
+                <input type="text" id="name"
+                    class="name border-2 w-[300px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff] transition-colors peer"
+                    autocomplete="off" placeholder="Name">
+            </div>
+
+            <!-- Email -->
+            <div class="relative mx-auto w-fit mb-[20px]">
+                <input type="text" id="email"
+                    class="email border-2 w-[300px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff] transition-colors peer"
+                    autocomplete="off" placeholder="Email">
+            </div>
+
+            <!-- Subject Dropdown -->
+            <div class="relative mx-auto w-fit mb-[20px]">
+                <select id="subject"
+                    class="border-2 w-[300px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff]">
+                    <option value="Suggestion">Subject</option>
+                    <option value="Suggestion">Suggestion</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Collaboration">Collaboration</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Message -->
+            <div class="relative mx-auto w-fit mb-[20px]">
+                <textarea id="message"
+                    class="message border-2 w-[300px] h-[200px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff] transition-colors peer resize-none"
+                    autocomplete="off" placeholder="Type your message here..."></textarea>
+            </div>
+
+            <!-- Send Button -->
+            <div class="relative mx-auto w-fit mb-[20px]">
+                <button onclick="sendEmail()"
+                    class="send bg-[#793fff] text-white h-10 w-32 rounded-[5px] shadow-lg shadow-[#793fff]/30">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+        <div class="w-full flex flex-col items-center justify-center relative py-8 bg-[#06021a]">
+
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- GitHub -->
+                <a href="https://github.com/UzaibBashir" target="_blank"
+                    class="group transition duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-github text-white bg-[#21212e] rounded-full p-2 group-hover:bg-[#793fff] group-hover:text-white cursor-pointer transition-colors duration-300"
+                        viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 
+            7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69
+            -.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+            1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78
+            -.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02
+            .08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 
+            2-.27.68 0 1.36.09 2 .27 1.53-1.04 
+            2.2-.82 2.2-.82.44 1.1.16 1.92.08 
+            2.12.51.56.82 1.27.82 2.15 
+            0 3.07-1.87 3.75-3.65 
+            3.95.29.25.54.73.54 1.48 
+            0 1.07-.01 1.93-.01 
+            2.2 0 .21.15.46.55.38A8.012 
+            8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="" target="_blank"
+                    class="group transition duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-linkedin text-white bg-[#21212e] rounded-full p-2 group-hover:bg-[#793fff] group-hover:text-white cursor-pointer transition-colors duration-300"
+                        viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 
+            0h13.65C15.474 0 16 .513 16 
+            1.146v13.708c0 .633-.526 
+            1.146-1.175 1.146H1.175C.526 
+            16 0 15.487 0 14.854V1.146zm4.943 
+            12.248V6.169H2.542v7.225h2.401zm-1.2
+            -8.212c.837 0 1.358-.554 
+            1.358-1.248-.015-.709-.52-1.248
+            -1.342-1.248-.822 0-1.358.54
+            -1.358 1.248 0 .694.52 1.248 
+            1.327 1.248h.015zM13.458 
+            13.394V9.359c0-2.17-1.159
+            -3.177-2.705-3.177-1.248 0
+            -1.807.688-2.122 1.172v
+            -1.003H6.23c.03.663 0 
+            7.043 0 7.043h2.401v
+            -3.933c0-.21.015-.42.077
+            -.572.168-.42.55-.855 
+            1.191-.855.84 0 1.176.645 
+            1.176 1.59v3.77h2.383z" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <p class="text-white text-sm sm:text-base text-center">
+                <i class="bi bi-c-circle"></i> 2025 All rights reserved | Developed with 💜 by Uzaib
+            </p>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>
