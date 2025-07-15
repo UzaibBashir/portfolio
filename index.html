@@ -19,7 +19,7 @@
     <!-- Navigation Bar -->
     <nav class="bg-[#21212e] py-3 md:flex md:items-center md:justify-between">
         <div class="flex items-center justify-between mx-10 my-2">
-            <img src="img/hero.png" class="select-none h-[60px] w-[60px] border-4 rounded-full">
+            <img src="img/hero.png" class="select-none h-[60px] w-[60px] border-4 border-[#793fff] rounded-full">
             <span class="-mx-[1px] text-4xl cursor-pointer text-[#bfaeff] px-[10px]"><b>Uzaib Bashir Malik</b></span>
             <span class="text-3xl cursor-pointer text-[#793fff] md:hidden block"><ion-icon name="menu-outline"
                     onclick="Menu(this)"></ion-icon></span>
@@ -28,26 +28,26 @@
             class="md:flex md:items-center md:z-auto md:static bg-[#21212e] absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
             <!--z-[-1]-->
             <li class="mx-4 my-4 md:my-0">
-                <a href="#" class="text-white hover:text-[#793fff] duration-500">Home</a>
+                <a href="#home" class="text-white hover:text-[#793fff] duration-500">Home</a>
             </li>
             <li class="mx-4 my-4 md:my-0">
-                <a href="#" class="text-white hover:text-[#793fff] duration-500">About</a>
+                <a href="#about" class="text-white hover:text-[#793fff] duration-500">About</a>
             </li>
             <li class="mx-4 my-4 md:my-0">
-                <a href="#" class="text-white hover:text-[#793fff] duration-500">Experience</a>
+                <a href="#exp" class="text-white hover:text-[#793fff] duration-500">Experience</a>
             </li>
             <li class="mx-4 my-4 md:my-0">
-                <a href="#" class="text-white hover:text-[#793fff] duration-500">Projects</a>
+                <a href="#pro" class="text-white hover:text-[#793fff] duration-500">Projects</a>
             </li>
             <li class="mx-4 my-4 md:my-0">
-                <button
-                    class="bg-[#8faee0] shadow-lg shadow-[#793fff]/30 text-white h-8 w-32 rounded-[5px]">Contact</button>
+                <button onclick="login()"
+                    class="bg-[#8faee0] shadow-lg shadow-[#793fff]/10 text-white h-8 w-32 rounded-[5px] hover:scale-105 font-medium">Login</button>
             </li>
         </ul>
     </nav>
 
     <!-- top section -->
-    <section>
+    <section id="home">
         <div class="relative h-[500px] bg-[url('img/bg.png')] bg-cover bg-center bg-[#21212e]">
             <!-- Overlay -->
             <div class="absolute inset-0 bg-[#21212e]/30 z-10"></div>
@@ -57,23 +57,31 @@
                 <div
                     class="absolute bottom-[40px] left-[50px] bg-black/20 backdrop-blur-[1px] px-6 py-4 rounded-md w-fit shadow-md">
                     <div class="text-white text-3xl drop-shadow-md mb-2">
-                        Assaalmualikum, I'm <span class="text-[#bfaeff] font-bold">Uzaib</span>
+                        ٱلسَّلَامُ عَلَيْكُمْ, I'm <span class="text-[#bfaeff] font-bold">Uzaib</span>
                     </div>
-                    <div class="text-white text-base mb-4 drop-shadow-sm leading-relaxed">
+                    <div class="text-white text-base mb-4 drop-shadow-sm leading-relaxed h-[80px] w-[300px] overflow-hidden"
+                        id="animated-text-target">
                         Well I am an Artist working to<br>
                         make world a better place<br>
                         <span class="font-semibold">Know more about me below. ⬇️</span>
                     </div>
-                    <button class="bg-[#793fff] text-white h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30">
-                        Download CV
-                    </button>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button onclick="downloadCV()"
+                            class="bg-[#793fff] hover:bg-[#6b2fff] text-white px-8 py-3 rounded-lg shadow-lg shadow-[#793fff]/30 transition-all duration-300 transform hover:scale-105 font-medium">
+                            <i class="bi bi-download mr-2"></i>Download CV
+                        </button>
+                        <a href="#contact"
+                            class="border-2 border-[#793fff] text-[#793fff] hover:bg-[#793fff] hover:text-white px-8 py-3 rounded-lg transition-all duration-300 text-center font-medium">
+                            Contact
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- bio-section -->
-    <section>
+    <section id="about">
         <p class="my-[50px] text-center text-3xl text-white font-extrabold">
             Here's More <span class="text-[#793fff]">About Me</span>
         </p>
@@ -146,366 +154,755 @@
                     solve realistic problems</p>
             </div>
         </div>
-    </section>
 
-    <!-- Experience section -->
-    <section>
-        <p class="my-[50px] text-center text-3xl text-white font-extrabold">📌 My <span
-                class="text-[#793fff]">Experience</span></p>
-        <p class="text-white text-center -mt-[20px] mb-[60px] px-[5px]">This timeline summarizes my learnings till the
-            date.</p>
-        <!-- Responsive timeline container -->
-        <div class="flex flex-wrap justify-center gap-10 px-4 py-6">
-            <!-- Timeline item -->
-            <div class="flex flex-col items-center w-[260px]">
-                <div class="text-[#793fff] bg-white rounded-full p-1">
-                    <!-- Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                    </svg>
+        <!-- Skills Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Frontend Development -->
+            <div class="bg-[#21212e] rounded-2xl p-8 card-hover">
+                <div class="text-[#793fff] text-4xl mb-4">
+                    <i class="bi bi-code-slash"></i>
                 </div>
-                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
-                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2015</div>
-                    <p class="text-white text-center">Joined Jawahar Navodaya Vidyalaya</p>
-                </div>
-            </div>
-            <!-- Repeat this block for each year -->
-            <div class="flex flex-col items-center w-[260px]">
-                <div class="text-[#793fff] bg-white rounded-full p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                    </svg>
-                </div>
-                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
-                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2020</div>
-                    <p class="text-white text-center">Passed 10th standard from CBSE</p>
-                </div>
-            </div>
-            <div class="flex flex-col items-center w-[260px]">
-                <div class="text-[#793fff] bg-white rounded-full p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                    </svg>
-                </div>
-                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
-                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2022</div>
-                    <p class="text-white text-center">completed Intermediate in Physics, Chemistry, Maths and Computer
-                        Science </p>
-                </div>
-            </div>
-            <!-- Add remaining items here -->
-            <!-- ... -->
-            <div class="flex flex-col items-center w-[260px]">
-                <div class="text-[#793fff] bg-white rounded-full p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                        class="bi bi-check-circle-fill animate-ping" viewBox="0 0 16 16">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                    </svg>
-                </div>
-                <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
-                    <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">Currently</div>
-                    <p class="text-white text-center">pursuing BE/Btech in Computer Science and Engineering</p>
+                <h3 class="text-xl font-bold text-white mb-4">Frontend Development</h3>
+                <p class="text-gray-400 mb-6">Creating responsive and interactive user interfaces with modern
+                    frameworks.</p>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">HTML/CSS</span>
+                        <span class="text-[#793fff]">98%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 98%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">JavaScript</span>
+                        <span class="text-[#793fff]">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 90%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">React</span>
+                        <span class="text-[#793fff]">25%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 25%"></div>
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-
-    <!-- Project section -->
-    <section>
-        <div class="bg-[#21212e] h-[1400px] mb-[40px] w-auto md:h-[760px] lg:h-[540px]">
-            <p class=" mt-[50px] pt-[30px] text-center text-3xl text-[#793fff] font-extrabold md:mb-[40px]">Projects
-            </p>
-            <div class="xl:ml-[120px] 2xl:ml-[180px]">
-                <img src="img/password-generator.png"
-                    class="select-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:ml-[35px] xl:ml-[65px]">
-                <div class="group">
-                    <div
-                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] xl:ml-[85px]">
-                    </div>
-                    <p
-                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[100px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[220px] md:ml-[120px] lg:ml-[100px] xl:ml-[120px]">
-                        Password Generator</p>
+            <!-- Backend Development -->
+            <div class="bg-[#21212e] rounded-2xl p-8 card-hover">
+                <div class="text-[#793fff] text-4xl mb-4">
+                    <i class="bi bi-server"></i>
                 </div>
-                <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[280px] xl:ml-[300px]"
-                        viewBox="0 0 16 16">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                        <path
-                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                    </svg></a>
-                <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[330px]"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                    </svg></a>
-            </div>
-            <!-- Weather-App -->
-            <div class="xl:ml-[120px] 2xl:ml-[180px]">
-                <img src="img/proWeather.png"
-                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:ml-[380px] xl:ml-[410px]">
-                <div class="group">
-                    <div
-                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] xl:ml-[430px]">
+                <h3 class="text-xl font-bold text-white mb-4">Backend Development</h3>
+                <p class="text-gray-400 mb-6">Building robust server-side applications and APIs with various
+                    technologies.</p>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Node.js</span>
+                        <span class="text-[#793fff]">10%</span>
                     </div>
-                    <p
-                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[250px] md:ml-[460px] xl:ml-[490px]">
-                        Weather App</p>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 10%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">PHP</span>
+                        <span class="text-[#793fff]">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 75%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Python</span>
+                        <span class="text-[#793fff]">2%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 2%"></div>
+                    </div>
                 </div>
-                <a href="#" target="_blank">
-                    <!-- https://ashish-makes.github.io/blurry-gradient/ -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[630px] xl:ml-[650px]"
-                        viewBox="0 0 16 16">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                        <path
-                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                    </svg></a>
-                <a href="https://github.com/UzaibBashir/Weather-App" target="_blank"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[660px] xl:ml-[680px]"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                    </svg></a>
             </div>
 
-            <div class="xl:ml-[120px] 2xl:ml-[180px]">
-                <img src="img/encode-decode.png"
-                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:ml-[725px] lg:-mt-[180px] xl:ml-[755px]">
-                <div class="group">
-                    <div
-                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] lg:ml-[745px] xl:ml-[775px]">
-                    </div>
-                    <p
-                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[250px] md:ml-[140px] lg:ml-[805px] xl:ml-[840px]">
-                        Encode Decode</p>
+            <!-- Database & Tools -->
+            <div class="bg-[#21212e] rounded-2xl p-8 card-hover">
+                <div class="text-[#793fff] text-4xl mb-4">
+                    <i class="bi bi-database"></i>
                 </div>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[965px] xl:ml-[985px]"
-                        viewBox="0 0 16 16">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                        <path
-                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                    </svg></a>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[995px] xl:ml-[1015px]"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                    </svg></a>
+                <h3 class="text-xl font-bold text-white mb-4">Database & Tools</h3>
+                <p class="text-gray-400 mb-6">Working with databases and development tools to create efficient
+                    solutions.</p>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">MySQL</span>
+                        <span class="text-[#793fff]">50%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 50%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Git</span>
+                        <span class="text-[#793fff]">95%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 95%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">MongoDB</span>
+                        <span class="text-[#793fff]">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 75%"></div>
+                    </div>
+                </div>
             </div>
-            <div class="xl:ml-[120px] 2xl:ml-[180px]">
-                <img src="img/payment-gateway.png"
-                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:ml-[728px] lg:mt-[25px] xl:ml-[65px]">
-                <div class="group">
-                    <div
-                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] lg:ml-[745px] xl:ml-[75px]">
-                    </div>
-                    <p
-                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[110px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[240px] md:ml-[480px] lg:ml-[800px] xl:ml-[120px]">
-                        Payment Gateway</p>
+
+            <!-- Programming Languages -->
+            <div class="bg-[#21212e] rounded-2xl p-8 card-hover">
+                <div class="text-[#793fff] text-4xl mb-4">
+                    <i class="bi bi-braces"></i>
                 </div>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[640px] lg:ml-[965px] xl:ml-[300px]"
-                        viewBox="0 0 16 16">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                        <path
-                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                    </svg></a>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[670px] lg:ml-[995px] xl:ml-[330px]"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                    </svg></a>
+                <h3 class="text-xl font-bold text-white mb-4">Programming Languages</h3>
+                <p class="text-gray-400 mb-6">Proficient in multiple programming languages for diverse project
+                    requirements.</p>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">C++</span>
+                        <span class="text-[#793fff]">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 90%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">C</span>
+                        <span class="text-[#793fff]">98%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 98%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Java</span>
+                        <span class="text-[#793fff]">4%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 4%"></div>
+                    </div>
+                </div>
             </div>
-            <div class="xl:ml-[120px] 2xl:ml-[180px]">
-                <img src="img/text-tools.png"
-                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:-mt-[180px] lg:ml-[35px] xl:ml-[410px]">
-                <div class="group">
-                    <div
-                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] xl:ml-[430px]">
-                    </div>
-                    <p
-                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[160px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[280px] md:ml-[160px] xl:ml-[520px]">
-                        Text Tools</p>
+
+            <!-- Data Structures & Algorithms -->
+            <div class="bg-[#21212e] rounded-2xl p-8 card-hover">
+                <div class="text-[#793fff] text-4xl mb-4">
+                    <i class="bi bi-diagram-3"></i>
                 </div>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[280px] xl:ml-[650px]"
-                        viewBox="0 0 16 16">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                        <path
-                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                    </svg></a>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[310px] xl:ml-[680px]"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                    </svg></a>
+                <h3 class="text-xl font-bold text-white mb-4">DSA & Problem Solving</h3>
+                <p class="text-gray-400 mb-6">Strong foundation in data structures and algorithms for efficient problem
+                    solving.</p>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Data Structures</span>
+                        <span class="text-[#793fff]">95%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 95%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Algorithms</span>
+                        <span class="text-[#793fff]">10%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 10%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Problem Solving</span>
+                        <span class="text-[#793fff]">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 90%"></div>
+                    </div>
+                </div>
             </div>
-            <div class="xl:ml-[120px] 2xl:ml-[180px]">
-                <img src="img/word-counter.png"
-                    class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:-mt-[180px] lg:ml-[380px] xl:ml-[755px]">
-                <div class="group">
-                    <div
-                        class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] xl:ml-[785px]">
-                    </div>
-                    <p
-                        class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[260px] md:ml-[470px] xl:ml-[840px]">
-                        Word Counter</p>
+            <!-- detailed -->
+            <!-- Design & Creativity -->
+            <div class="bg-[#21212e] rounded-2xl p-8 card-hover">
+                <div class="text-[#793fff] text-4xl mb-4">
+                    <i class="bi bi-palette"></i>
                 </div>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[640px] lg:ml-[630px] xl:ml-[985px]"
-                        viewBox="0 0 16 16">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                        <path
-                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                    </svg></a>
-                <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        fill="currentColor"
-                        class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[660px] xl:ml-[1015px]"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                    </svg></a>
+                <h3 class="text-xl font-bold text-white mb-4">Design & Creativity</h3>
+                <p class="text-gray-400 mb-6">Combining technical skills with creative design to build beautiful user
+                    experiences.</p>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">UI/UX Design</span>
+                        <span class="text-[#793fff]">15%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 15%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Figma</span>
+                        <span class="text-[#793fff]">0%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 0%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white">Creative Thinking</span>
+                        <span class="text-[#793fff]">96%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-[#793fff] to-[#bfaeff] h-2 rounded-full progress-bar"
+                            style="width: 96%"></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- contact -->
-    <section>
-        <div class="bg-[#21212e] h-auto w-auto pb-[40px]">
-            <p class="py-[30px] text-center text-3xl text-white font-extrabold">Contact</p>
+        <section>
+            <p class="my-[50px] text-center text-3xl text-white font-extrabold">📌 My <span
+                    class="text-[#793fff]">Experience</span></p>
+            <p class="text-white text-center -mt-[20px] mb-[60px] px-[5px]">This timeline summarizes my learnings till
+                the
+                date.</p>
+            <!-- Responsive timeline container -->
+            <div class="flex flex-wrap justify-center gap-10 px-4 py-6">
+                <!-- Timeline item -->
+                <div class="flex flex-col items-center w-[260px]">
+                    <div class="text-[#793fff] bg-white rounded-full p-1">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                        <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2015</div>
+                        <p class="text-white text-center">Joined Jawahar Navodaya Vidyalaya</p>
+                    </div>
+                </div>
+                <!-- Repeat this block for each year -->
+                <div class="flex flex-col items-center w-[260px]">
+                    <div class="text-[#793fff] bg-white rounded-full p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                        <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2020</div>
+                        <p class="text-white text-center">Passed 10th standard from CBSE</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center w-[260px]">
+                    <div class="text-[#793fff] bg-white rounded-full p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                        <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2022</div>
+                        <p class="text-white text-center">completed Intermediate in Physics, Chemistry, Maths and
+                            Computer
+                            Science </p>
+                    </div>
+                </div>
 
-            <!-- Name -->
-            <div class="relative mx-auto w-fit mb-[20px]">
-                <input type="text" id="name"
-                    class="name border-2 w-[300px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff] transition-colors peer"
-                    autocomplete="off" placeholder="Name">
+                <div class="flex flex-col items-center w-[260px]">
+                    <div class="text-[#793fff] bg-white rounded-full p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                        <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2023</div>
+                        <p class="text-white text-center">Started learning Full Stack Development</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center w-[260px]">
+                    <div class="text-[#793fff] bg-white rounded-full p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                        <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">2024</div>
+                        <p class="text-white text-center">Completed several personal projects</p>
+                    </div>
+                </div>
+                <!-- Add remaining items here -->
+                <div class="flex flex-col items-center w-[260px]">
+                    <div class="text-[#793fff] bg-white rounded-full p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-check-circle-fill animate-ping" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="bg-[#21212e] mt-4 rounded-[10px] p-4 w-full">
+                        <div class="bg-[#793fff] text-white rounded-full text-center text-sm py-1 mb-3">Currently</div>
+                        <p class="text-white text-center">pursuing BE/Btech in Computer Science and Engineering</p>
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-            <!-- Email -->
-            <div class="relative mx-auto w-fit mb-[20px]">
-                <input type="text" id="email"
-                    class="email border-2 w-[300px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff] transition-colors peer"
-                    autocomplete="off" placeholder="Email">
+
+        <!-- Project section -->
+        <section>
+            <div class="bg-[#21212e] h-[1400px] mb-[40px] w-auto md:h-[760px] lg:h-[540px]">
+                <p class=" mt-[50px] pt-[30px] text-center text-3xl text-[#793fff] font-extrabold md:mb-[40px]">Projects
+                </p>
+                <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                    <img src="img/password-generator.png"
+                        class="select-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:ml-[35px] xl:ml-[65px]">
+                    <div class="group">
+                        <div
+                            class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] xl:ml-[85px]">
+                        </div>
+                        <p
+                            class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[100px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[220px] md:ml-[120px] lg:ml-[100px] xl:ml-[120px]">
+                            Password Generator</p>
+                    </div>
+                    <a href="https://password-generator-ten-nu.vercel.app/" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[280px] xl:ml-[300px]"
+                            viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg></a>
+                    <a href="https://github.com/LouisErigHerve/Password_Generator" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[330px]"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                        </svg></a>
+                </div>
+                <!-- Weather-App -->
+                <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                    <img src="img/proWeather.png"
+                        class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:ml-[380px] xl:ml-[410px]">
+                    <div class="group">
+                        <div
+                            class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] xl:ml-[430px]">
+                        </div>
+                        <p
+                            class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[250px] md:ml-[460px] xl:ml-[490px]">
+                            Weather App</p>
+                    </div>
+                    <a href="#" target="_blank">
+                        <!-- https://ashish-makes.github.io/blurry-gradient/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[630px] xl:ml-[650px]"
+                            viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg></a>
+                    <a href="https://github.com/UzaibBashir/Weather-App" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[660px] xl:ml-[680px]"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                        </svg></a>
+                </div>
+
+                <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                    <img src="img/encode-decode.png"
+                        class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:ml-[725px] lg:-mt-[180px] xl:ml-[755px]">
+                    <div class="group">
+                        <div
+                            class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] lg:ml-[745px] xl:ml-[775px]">
+                        </div>
+                        <p
+                            class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[250px] md:ml-[140px] lg:ml-[805px] xl:ml-[840px]">
+                            Encode Decode</p>
+                    </div>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[965px] xl:ml-[985px]"
+                            viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg></a>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[995px] xl:ml-[1015px]"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                        </svg></a>
+                </div>
+                <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                    <img src="img/payment-gateway.png"
+                        class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:ml-[728px] lg:mt-[25px] xl:ml-[65px]">
+                    <div class="group">
+                        <div
+                            class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] lg:ml-[745px] xl:ml-[75px]">
+                        </div>
+                        <p
+                            class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[110px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[240px] md:ml-[480px] lg:ml-[800px] xl:ml-[120px]">
+                            Payment Gateway</p>
+                    </div>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[640px] lg:ml-[965px] xl:ml-[300px]"
+                            viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg></a>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[670px] lg:ml-[995px] xl:ml-[330px]"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                        </svg></a>
+                </div>
+                <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                    <img src="img/text-tools.png"
+                        class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[60px] lg:-mt-[180px] lg:ml-[35px] xl:ml-[410px]">
+                    <div class="group">
+                        <div
+                            class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[75px] xl:ml-[430px]">
+                        </div>
+                        <p
+                            class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[160px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[280px] md:ml-[160px] xl:ml-[520px]">
+                            Text Tools</p>
+                    </div>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[300px] lg:ml-[280px] xl:ml-[650px]"
+                            viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg></a>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[330px] lg:ml-[310px] xl:ml-[680px]"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                        </svg></a>
+                </div>
+                <div class="xl:ml-[120px] 2xl:ml-[180px]">
+                    <img src="img/word-counter.png"
+                        class="absoluteselect-none h-[180px] w-[320px] mx-[45px] mt-[30px] rounded-[10px] sm:ml-[170px] md:ml-[400px] md:-mt-[180px] lg:-mt-[180px] lg:ml-[380px] xl:ml-[755px]">
+                    <div class="group">
+                        <div
+                            class="absolute bg-[#793fff] cursor-pointer bg-opacity-0 h-[150px] w-[280px] mx-[65px] -mt-[165px] group-hover:bg-opacity-10 group-hover:blur-xl duration-100 sm:ml-[190px] md:ml-[420px] xl:ml-[785px]">
+                        </div>
+                        <p
+                            class="absolute text-[#06021a] opacity-0 text-[20px] font-extrabold ml-[130px] -mt-[100px] group-hover:opacity-100 duration-150 sm:ml-[260px] md:ml-[470px] xl:ml-[840px]">
+                            Word Counter</p>
+                    </div>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-eye-fill absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[290px] sm:ml-[420px] md:ml-[640px] lg:ml-[630px] xl:ml-[985px]"
+                            viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg></a>
+                    <a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor"
+                            class="bi bi-browser-chrome absolute text-white bg-[#793fff] p-[4px] rounded-full -mt-[35px] mx-[320px] sm:ml-[450px] md:ml-[660px] xl:ml-[1015px]"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                        </svg></a>
+                </div>
             </div>
+        </section>
 
-            <!-- Subject Dropdown -->
-            <div class="relative mx-auto w-fit mb-[20px]">
-                <select id="subject"
-                    class="border-2 w-[300px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff]">
-                    <option value="Suggestion">Subject</option>
-                    <option value="Suggestion">Suggestion</option>
-                    <option value="Feedback">Feedback</option>
-                    <option value="Collaboration">Collaboration</option>
-                    <option value="Other">Other</option>
-                </select>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                        Get In <span class="gradient-text">Touch</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                        Have a project in mind or want to collaborate? I'd love to hear from you!
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-[#21212e] rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-[#793fff] p-3 rounded-full">
+                                        <i class="bi bi-envelope text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-medium">Email</div>
+                                        <div class="text-gray-400">uzaib.bashir@example.com</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-[#793fff] p-3 rounded-full">
+                                        <i class="bi bi-phone text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-medium">Phone</div>
+                                        <div class="text-gray-400">+91 98765 43210</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-[#793fff] p-3 rounded-full">
+                                        <i class="bi bi-geo-alt text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-medium">Location</div>
+                                        <div class="text-gray-400">India</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-[#793fff] p-3 rounded-full">
+                                        <i class="bi bi-clock text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-medium">Response Time</div>
+                                        <div class="text-gray-400">Within 24 hours</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="mt-8 pt-6 border-t border-gray-700">
+                                <div class="text-white font-medium mb-4">Follow Me</div>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/UzaibBashir" target="_blank"
+                                        class="bg-[#06021a] p-3 rounded-full hover:bg-[#793fff] transition-colors duration-300 group">
+                                        <i class="bi bi-github text-white text-xl"></i>
+                                    </a>
+                                    <a href="#" target="_blank"
+                                        class="bg-[#06021a] p-3 rounded-full hover:bg-[#793fff] transition-colors duration-300 group">
+                                        <i class="bi bi-linkedin text-white text-xl"></i>
+                                    </a>
+                                    <a href="#" target="_blank"
+                                        class="bg-[#06021a] p-3 rounded-full hover:bg-[#793fff] transition-colors duration-300 group">
+                                        <i class="bi bi-twitter text-white text-xl"></i>
+                                    </a>
+                                    <a href="#" target="_blank"
+                                        class="bg-[#06021a] p-3 rounded-full hover:bg-[#793fff] transition-colors duration-300 group">
+                                        <i class="bi bi-instagram text-white text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-[#21212e] rounded-2xl p-8">
+                        <form id="contactForm" class="space-y-6">
+                            <!-- Name and Email Row -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-white font-medium mb-2">Full Name *</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full bg-[#06021a] border-2 border-[#793fff]/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#793fff] transition-colors"
+                                        placeholder="Your full name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-white font-medium mb-2">Email Address *</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full bg-[#06021a] border-2 border-[#793fff]/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#793fff] transition-colors"
+                                        placeholder="your.email@example.com">
+                                </div>
+                            </div>
+
+                            <!-- co and Subject Row -->
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Company/Organization -->
+                                <div>
+                                    <label for="company"
+                                        class="block text-white font-medium mb-2">Company/Organization</label>
+                                    <input type="text" id="company" name="company"
+                                        class="w-full bg-[#06021a] border-2 border-[#793fff]/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#793fff] transition-colors"
+                                        placeholder="Your company or organization">
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-white font-medium mb-2">Subject *</label>
+                                    <select id="subject" name="subject" required
+                                        class="w-full bg-[#06021a] border-2 border-[#793fff]/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#793fff] transition-colors">
+                                        <option value="">Select a subject</option>
+                                        <option value="collaboration">Collaboration</option>
+                                        <option value="project">Project Inquiry</option>
+                                        <option value="job">Job Opportunity</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- Message -->
+                            <div>
+                                <label for="message" class="block text-white font-medium mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="2" required
+                                    class="w-full bg-[#06021a] border-2 border-[#793fff]/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#793fff] transition-colors resize-none"
+                                    placeholder="Tell me about your project or how I can help you..."></textarea>
+                            </div>
+
+                            <!-- Preferred Contact Method -->
+                            <div>
+                                <label class="block text-white font-medium mb-2">Preferred Contact Method</label>
+                                <div class="flex flex-wrap gap-4">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="contact_method" value="email" checked
+                                            class="text-[#793fff] focus:ring-[#793fff]">
+                                        <span class="ml-2 text-gray-300">Email</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="contact_method" value="phone"
+                                            class="text-[#793fff] focus:ring-[#793fff]">
+                                        <span class="ml-2 text-gray-300">Phone</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="contact_method" value="whatsapp"
+                                            class="text-[#793fff] focus:ring-[#793fff]">
+                                        <span class="ml-2 text-gray-300">WhatsApp</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" id="submitBtn"
+                                class="w-full bg-gradient-to-r from-[#793fff] to-[#bfaeff] text-white py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-[#793fff]/30 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                                <span id="submitText">Send Message</span>
+                                <i id="submitIcon" class="bi bi-send ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Message -->
-            <div class="relative mx-auto w-fit mb-[20px]">
-                <textarea id="message"
-                    class="message border-2 w-[300px] h-[200px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-1 focus:outline-none focus:border-[#793fff] transition-colors peer resize-none"
-                    autocomplete="off" placeholder="Type your message here..."></textarea>
+        <!-- Footer -->
+        <footer class="bg-[#21212e] py-12">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <!-- About -->
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="https://placehold.co/40x40/793fff/ffffff?text=UB" class="h-10 w-10 rounded-full">
+                            <span class="text-xl font-bold text-white">Uzaib Bashir</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">
+                            Artist <br>Computer Science and Engineering student <br> Full Stack Developer
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/UzaibBashir" target="_blank"
+                                class="text-gray-400 hover:text-[#793fff] transition-colors">
+                                <i class="bi bi-github text-xl"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#793fff] transition-colors">
+                                <i class="bi bi-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#793fff] transition-colors">
+                                <i class="bi bi-twitter text-xl"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-gray-400 hover:text-[#793fff] transition-colors">
+                                <i class="bi bi-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-[#793fff] transition-colors">Home</a>
+                            </li>
+                            <li><a href="#about" class="text-gray-400 hover:text-[#793fff] transition-colors">About</a>
+                            </li>
+                            <li><a href="#skills"
+                                    class="text-gray-400 hover:text-[#793fff] transition-colors">Skills</a></li>
+                            <li><a href="#experience"
+                                    class="text-gray-400 hover:text-[#793fff] transition-colors">Experience</a></li>
+                            <li><a href="#projects"
+                                    class="text-gray-400 hover:text-[#793fff] transition-colors">Projects</a></li>
+                            <li><a href="#contact"
+                                    class="text-gray-400 hover:text-[#793fff] transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-4">Contact Info</h3>
+                        <div class="space-y-2 text-gray-400">
+                            <div class="flex items-center space-x-2">
+                                <i class="bi bi-envelope"></i>
+                                <span>uzaib.bashir@example.com</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>India</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="bi bi-clock"></i>
+                                <span>Available for freelance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-700 pt-8 text-center">
+                    <p class="text-gray-400">
+                        <i class="bi bi-c-circle"></i> 2024 Uzaib Bashir. All rights reserved.
+                        <br>
+                        <span class="text-[#793fff]">developed with 💜 by Uzaib</span>
+                    </p>
+                </div>
             </div>
+        </footer>
 
-            <!-- Send Button -->
-            <div class="relative mx-auto w-fit mb-[20px]">
-                <button onclick="sendEmail()"
-                    class="send bg-[#793fff] text-white h-10 w-32 rounded-[5px] shadow-lg shadow-[#793fff]/30">Send</button>
-            </div>
-        </div>
-    </section>
+        <!-- Back to Top Button -->
+        <button id="backToTop"
+            class="fixed bottom-8 right-8 bg-[#793fff] text-white p-3 rounded-full shadow-lg hover:bg-[#6b2fff] transition-all duration-300 transform hover:scale-110 opacity-0 invisible">
+            <i class="bi bi-arrow-up text-xl"></i>
+        </button>
 
-    <!-- footer -->
-    <section>
-        <div class="w-full flex flex-col items-center justify-center relative py-8 bg-[#06021a]">
-
-            <!-- Social Icons -->
-            <div class="flex justify-center space-x-6 mb-6">
-                <!-- GitHub -->
-                <a href="https://github.com/UzaibBashir" target="_blank"
-                    class="group transition duration-300 transform hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                        class="bi bi-github text-white bg-[#21212e] rounded-full p-2 group-hover:bg-[#793fff] group-hover:text-white cursor-pointer transition-colors duration-300"
-                        viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 
-            7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69
-            -.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
-            1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78
-            -.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02
-            .08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 
-            2-.27.68 0 1.36.09 2 .27 1.53-1.04 
-            2.2-.82 2.2-.82.44 1.1.16 1.92.08 
-            2.12.51.56.82 1.27.82 2.15 
-            0 3.07-1.87 3.75-3.65 
-            3.95.29.25.54.73.54 1.48 
-            0 1.07-.01 1.93-.01 
-            2.2 0 .21.15.46.55.38A8.012 
-            8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                    </svg>
-                </a>
-
-                <!-- LinkedIn -->
-                <a href="" target="_blank"
-                    class="group transition duration-300 transform hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                        class="bi bi-linkedin text-white bg-[#21212e] rounded-full p-2 group-hover:bg-[#793fff] group-hover:text-white cursor-pointer transition-colors duration-300"
-                        viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 
-            0h13.65C15.474 0 16 .513 16 
-            1.146v13.708c0 .633-.526 
-            1.146-1.175 1.146H1.175C.526 
-            16 0 15.487 0 14.854V1.146zm4.943 
-            12.248V6.169H2.542v7.225h2.401zm-1.2
-            -8.212c.837 0 1.358-.554 
-            1.358-1.248-.015-.709-.52-1.248
-            -1.342-1.248-.822 0-1.358.54
-            -1.358 1.248 0 .694.52 1.248 
-            1.327 1.248h.015zM13.458 
-            13.394V9.359c0-2.17-1.159
-            -3.177-2.705-3.177-1.248 0
-            -1.807.688-2.122 1.172v
-            -1.003H6.23c.03.663 0 
-            7.043 0 7.043h2.401v
-            -3.933c0-.21.015-.42.077
-            -.572.168-.42.55-.855 
-            1.191-.855.84 0 1.176.645 
-            1.176 1.59v3.77h2.383z" />
-                    </svg>
-                </a>
-            </div>
-
-            <!-- Footer -->
-            <p class="text-white text-sm sm:text-base text-center">
-                <i class="bi bi-c-circle"></i> 2025 All rights reserved | Developed with 💜 by Uzaib
-            </p>
-        </div>
-    </section>
-
-    <script src="index.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="app.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
